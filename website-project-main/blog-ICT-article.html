@@ -8,8 +8,6 @@
   <link rel="stylesheet" type="text/css" href="node_modules/bulma/css/bulma.css" />
   <title>Blog</title>
   <style>
-
-
     body {
       color: tan;
     }
@@ -23,6 +21,7 @@
       font-size: 30px;
     }
 
+    /*The following css classes define the colours of the text of the page */
     .red {
       color: red;
     }
@@ -45,144 +44,82 @@
   </style>
 </head>
 
+<!-- the background image of the page-->
 <body class="body blog-background body-blog" background="./node_modules/background-img/better-blog-background.jpg">
   <main>
     <section>
-      <h1 class="center blog-background">
-        ICT article
-      </h1>
+
+      <h1 class="center blog-background">ICT article</h1>
+
+      <!--the topnav with the links to other pages-->
       <div class="topnav" id="myTopnav" class="columns is-6">
-        <div>
-          <a href="profile.html">My Profile</a>
-        </div>
-        <div>
-          <a href="dashboard.html">Dashboard</a>
-        </div>
-        <div>
-          <a style="background-color: green;" href="blog.html">Blog</a>
-        </div>
-        <div>
-          <a href="faq.html">FAQ</a>
-        </div>
-        <div>
-          <a href="index.html">Homepage</a>
-        </div>
+        <div><a href="profile.html">My Profile</a></div>
+        <div><a href="dashboard.html">Dashboard</a></div>
+        <div><a style="background-color: green;" href="blog.html">Blog</a></div>
+        <div><a href="faq.html">FAQ</a></div>
+        <div><a href="index.html">Homepage</a></div>
         </a>
       </div>
+
+      <!--navbar to move to other impotant pages-->
       <aside>
         <nav>
           <div class="buttons navbar-brand sidenav">
             <button class="button is-link links"><a class="links"
-                href="https://hz.nl/over-de-hz/regelingen-documenten-1/onderwijs-en-examenregelingen">Course
-                and Examination
-                Regulations</a></button>
-            <button class="button is-link links"><a class="links"
-                href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/OERS/2022-2023/IR-CER-HZ-B-HBO-ICT-full-time-2022-2023-DEF.pdf">Implementation
-                regulations</a></button>
-            <button class="button is-link links"><a class="links"
-                href="https://teams.microsoft.com/_?culture=en-us&country=US&lm=deeplink&lmsrc=homePageWeb&cmpid=WebSignIn#/school/conversations/Off-topic?threadId=19:71aec236ba3b469f9b22fba60dea0e4b@thread.skype&ctx=channel">Teams</a></button>
-            <button class="button is-link links"><a class="links"
-                href=" https://github.com/HZ-HBO-ICT">Github</a></button>
+                href="https://hz.nl/over-de-hz/regelingen-documenten-1/onderwijs-en-examenregelingen">Course and ExaminationRegulations</a></button>
+            <button class="button is-link links"><a class="links" href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/OERS/2022-2023/IR-CER-HZ-B-HBO-ICT-full-time-2022-2023-DEF.pdf">Implementation regulations</a></button>
+            <button class="button is-link links"><a class="links" href="https://teams.microsoft.com/_?culture=en-us&country=US&lm=deeplink&lmsrc=homePageWeb&cmpid=WebSignIn#/school/conversations/Off-topic?threadId=19:71aec236ba3b469f9b22fba60dea0e4b@thread.skype&ctx=channel">Teams</a></button>
+            <button class="button is-link links"><a class="links" href=" https://github.com/HZ-HBO-ICT">Github</a></button>
             <button class="button is-link links"><a class="links" href="https://learn.hz.nl/my/">HZ learn</a></button>
-            <button class="button is-link links"><a class="links" href="https://hz.osiris-student.nl/#/home">Study
-                progress</a></button>
+            <button class="button is-link links"><a class="links" href="https://hz.osiris-student.nl/#/home">Study progress</a></button>
           </div>
         </nav>
-        <script>
-          function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-          }
-
-          function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-          }
-        </script>
       </aside>
+
+      <!--the top of the textbox-->
       <div class="box center encased has-background-grey-darker">
-        <h2><a href="https://www.ictineducation.org/home-page/2010/8/20/25-features-of-outstanding-ict-lessons.html">25
-            features of outstanding ICT lessons:</a></a></h2>
-        <p>I looked online for some good articles to put here, when I came across this article above.(it's a link for
-          curious people)</p>
+        <h2><a href="https://www.ictineducation.org/home-page/2010/8/20/25-features-of-outstanding-ict-lessons.html">25 features of outstanding ICT lessons:</a></a></h2>
+        <p>I looked online for some good articles to put here, when I came across this article above.(it's a link for curious people)</p>
         <p>It described what a lessen in ICT requires to be entertaining and helpful to the students.</p>
-        <p>And I thought it would be a good excuse to rate the lessons I recieved here at HZ based on the features
-          talked about in the article</p>
-        <p>The rating system is based on colors. The more green, the more the teachers implement this in their lectures.
-          The more red, the less the teachers implements this in their lessons. </p>
+        <p>And I thought it would be a good excuse to rate the lessons I recieved here at HZ based on the featuresn talked about in the article</p>
+        <p>The rating system is based on colors. The more green, the more the teachers implement this in their lectures. The more red, the less the teachers implements this in their lessons. </p>
+       
         <hr>
+
+        <!--body of the text box with the ratings-->
         <h3 class="no-dots">
           <ol id="yui_3_17_2_1_1470978998423_96706">
-            <ul class="yellow-green">The lesson forms part of a unit which forms part of a scheme of work. </ul>
-            <ul class="green">The subject matter of the lesson is interesting and useful, not chosen solely for
-              examination purposes.
-            </ul>
-            <ul class="yellow-green">There is a good starter activity, one that gets the pupils settled down and in the
-              right frame of mind to
-              do the work the teacher has planned for them. </ul>
-            <ul class="orange">The teacher spends time at the start letting pupils into the “secret” of what the
-              objectives (intended
-              learning outcomes) of the lesson are, ie what is intended to be achieved by the end, and how this lesson
-              fits in with the preceding and following lessons. </ul>
-            <ul class="yellow-green">There is a good pace to the lesson, even where pupils are working on projects and
-              not being “taught from
-              the front”. </ul>
-            <ul class="green">Pupils are given openended tasks (as far as possible), or at least not tasks with a glass
-              ceiling. (Even
-              lessons designed to impart a set of skills can still be more interesting than “drill practice”). </ul>
-            <ul class="green">There are plenty of resources for the pupils to use, enabling the teacher to give quality
-              guidance, ie not confined to mundane tasks such as explaining how to save the document. Such
-              resources will include “how to” guides and posters, onscreen help (which the pupils will have been taught
-              how to use), and each other. </ul>
-            <ul class="orange">Ample time is allowed for the plenary, thereby allowing it to be somewhat more useful
-              than the POLO model:
-              Print Out and Log Off. The plenary is an essential part of the lesson, used to check what
-              learning has taken place, consolidate learning, and prepare pupils for the next stage. In fact, a lesson
-              might have two or three plenaries rather than just one at the end. </ul>
-            <ul class="green">Homework is set in order to consolidate and extend the pupils' understanding of the work
-              they have been
-              doing in lessons.</ul>
+            <ul class="yellow-green">The lesson forms part of a unit which forms part of a scheme of work.</ul>
+            <ul class="green">The subject matter of the lesson is interesting and useful, not chosen solely for examination purposes.</ul>
+            <ul class="yellow-green">There is a good starter activity, one that gets the pupils settled down and in the right frame of mind to do the work the teacher has planned for them. </ul>
+            <ul class="orange">The teacher spends time at the start letting pupils into the “secret” of what the objectives (intended learning outcomes) of the lesson are, ie what is intended to be achieved by the end, and how this lesson fits in with the preceding and following lessons.</ul>
+            <ul class="yellow-green">There is a good pace to the lesson, even where pupils are working on projects and not being “taught from the front”. </ul>
+            <ul class="green">Pupils are given openended tasks (as far as possible), or at least not tasks with a glass ceiling. (Even lessons designed to impart a set of skills can still be more interesting than “drill practice”). </ul>
+            <ul class="green">There are plenty of resources for the pupils to use, enabling the teacher to give quality guidance, ie not confined to mundane tasks such as explaining how to save the document. Such resources will include “how to” guides and posters, onscreen help (which the pupils will have been taught how to use), and each other. </ul>
+            <ul class="orange">Ample time is allowed for the plenary, thereby allowing it to be somewhat more useful than the POLO model: Print Out and Log Off. The plenary is an essential part of the lesson, used to check what learning has taken place, consolidate learning, and prepare pupils for the next stage. In fact, a lesson might have two or three plenaries rather than just one at the end. </ul>
+            <ul class="green">Homework is set in order to consolidate and extend the pupils' understanding of the work they have been doing in lessons.</ul>
             <ul class="green">A range of technology is available, and pupils are able to use it when they need to. </ul>
-            <ul class="yellow-green">Pupils are given plenty of time with the technology, with the teacher helping
-              individuals and small
-              groups. </ul>
-            <ul class="yellow-green">The teacher makes great use of the technology, including Learning Platforms,
-              visualisers, interactive whiteboard and digital
-              cameras
-              <ul style="color: darkgreen;">The teacher is brimming with enthusiasm! </ul>
-              <ul class="green">The teacher is flexible, able to go with the flow of what's happening right here and now
-                in the classroom,
-                not slavishly following the lesson plan. </ul>
-              <ul class="green">Work is set at an appropriate standard, taking into account the pupils' prior learning
-                and attainment, and
-                what is expected of their age group in terms of national standards. </ul>
-              <ul class="green">There is a lot of questioning probing questioning and assessment for learning
-                techniques are in evidence. </ul>
-              <ul class="yellow-green">There is a good range of material to provide for differentiation (higher
-                attainers and children with
-                special educational needs) and personalised learning. </ul>
-              <ul class="yellow-green">The teacher is aware of individual pupils' needs, and makes use of the assessment
-                and other data she has
-                remember: data only becomes information if you do something with it! </ul>
-              <ul class="yellow">Not all work takes place at a computer: there is ample opportunity for discussion and
-                reflection. What is
-                important is not the use of technology <em>per se</em>, but the appropriate use of
-                technology. </ul>
-              <ul class="yellow-green">Pupils respect the equipment and the room. For example, they do not leave
-                discarded printouts on the
-                floor. </ul>
-              <ul class="yellow">Pupils are happy and confident enough to try out things which the teacher has not
-                actually shown them:
-                they ask help from each other or look at the posters and manuals that are available for them. </ul>
-              <ul class="orange">Pupils keep looking at the clock on the wall, because they want to get to a certain
-                point in their work
-                before the end of the lesson. They have a sense of urgency. </ul>
-              <ul class="yellow-green">Pupils want to continue working at lunchtime and other non-lesson times. </ul>
-              <ul class="green">Pupils want to show off little tricks they have discovered, such as keyboard shortcuts.
-              </ul>
-              <ul class="red">Pupils ask questions that the teacher is unable to answer. </ul>
+            <ul class="yellow-green">Pupils are given plenty of time with the technology, with the teacher helping individuals and small groups. </ul>
+            <ul class="yellow-green">The teacher makes great use of the technology, including Learning Platforms,visualisers, interactive whiteboard and digital cameras</ul> 
+            <ul style="color: darkgreen;">The teacher is brimming with enthusiasm! </ul>
+            <ul class="green">The teacher is flexible, able to go with the flow of what's happening right here and now in the classroom, not slavishly following the lesson plan. </ul>
+            <ul class="green">Work is set at an appropriate standard, taking into account the pupils' prior learning and attainment, and what is expected of their age group in terms of national standards. </ul>
+            <ul class="green">There is a lot of questioning probing questioning and assessment for learning techniques are in evidence. </ul>
+            <ul class="yellow-green">There is a good range of material to provide for differentiation (higher attainers and children with special educational needs) and personalised learning. </ul>
+            <ul class="yellow-green">The teacher is aware of individual pupils' needs, and makes use of the assessment and other data she has remember: data only becomes information if you do something with it! </ul>
+            <ul class="yellow">Not all work takes place at a computer: there is ample opportunity for discussion and reflection. What is important is not the use of technology <em>per se</em>, but the appropriate use of technology. </ul>
+            <ul class="yellow-green">Pupils respect the equipment and the room. For example, they do not leave discarded printouts on the floor. </ul>
+            <ul class="yellow">Pupils are happy and confident enough to try out things which the teacher has not actually shown them: they ask help from each other or look at the posters and manuals that are available for them. </ul>
+            <ul class="orange">Pupils keep looking at the clock on the wall, because they want to get to a certain point in their work before the end of the lesson. They have a sense of urgency. </ul>
+            <ul class="yellow-green">Pupils want to continue working at lunchtime and other non-lesson times. </ul>
+            <ul class="green">Pupils want to show off little tricks they have discovered, such as keyboard shortcuts.</ul>
+            <ul class="red">Pupils ask questions that the teacher is unable to answer. </ul>
           </ol>
+
           <hr>
-          <p>So it could be concluded that our teacher gives great ICT lessons and although there are improvments to be
-            made.</p>
+          
+          <!--concusion of the text page-->
+          <p>So it could be concluded that our teacher gives great ICT lessons and although there are improvments to be made.</p>
           <p>The pupils learn from the class and are excited to learn more.</p>
           <p>And that was it's all about in education.</p>
         </h3>
