@@ -7,7 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie-egde">
   <link rel="stylesheet" type="text/css" href="node_modules/bulma/css/bulma.css" />
   <title>Blog</title>
-  <style>    
+  <style>
+  /* some in document syling to adapt to the different amount of text */    
     h3 {
       color: whitesmoke;
       margin-left: 15%;
@@ -23,60 +24,36 @@
   </style>
 </head>
 
+<!--the background of the img-->
 <body class="body blog-background body-blog" background="./node_modules/background-img/better-blog-background.jpg">
   <main>
     <section>
-      <h1 class="center blog-background">
-        Feedback
-      </h1>
+      <h1 class="center blog-background">Feedback</h1>
+
+      <!--the topside navigation-->
       <div class="topnav" id="myTopnav" class="columns is-6">
-        <div>
-          <a href="profile.html">My Profile</a>
-        </div>
-        <div>
-          <a href="dashboard.html">Dashboard</a>
-        </div>
-        <div>
-          <a style="background-color: green;" href="blog.html">Blog</a>
-        </div>
-        <div>
-          <a href="faq.html">FAQ</a>
-        </div>
-        <div>
-          <a href="index.html">Homepage</a>
-        </div>
-        </a>
+        <div><a href="profile.html">My Profile</a></div>
+        <div><a href="dashboard.html">Dashboard</a></div>
+        <div><a style="background-color: green;" href="blog.html">Blog</a></div>
+        <div><a href="faq.html">FAQ</a></div>
+        <div><a href="index.html">Homepage</a></div>
       </div>
+
+      <!--sidebar navigation-->
       <aside>
         <nav>
           <div class="buttons navbar-brand sidenav">
-            <button class="button is-link links"><a class="links"
-                href="https://hz.nl/over-de-hz/regelingen-documenten-1/onderwijs-en-examenregelingen">Course
-                and Examination
-                Regulations</a></button>
-            <button class="button is-link links"><a class="links"
-                href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/OERS/2022-2023/IR-CER-HZ-B-HBO-ICT-full-time-2022-2023-DEF.pdf">Implementation
-                regulations</a></button>
-            <button class="button is-link links"><a class="links"
-                href="https://teams.microsoft.com/_?culture=en-us&country=US&lm=deeplink&lmsrc=homePageWeb&cmpid=WebSignIn#/school/conversations/Off-topic?threadId=19:71aec236ba3b469f9b22fba60dea0e4b@thread.skype&ctx=channel">Teams</a></button>
-            <button class="button is-link links"><a class="links"
-                href=" https://github.com/HZ-HBO-ICT">Github</a></button>
+            <button class="button is-link links"><a class="links" href="https://hz.nl/over-de-hz/regelingen-documenten-1/onderwijs-en-examenregelingen">Course and Examination Regulations</a></button>
+            <button class="button is-link links"><a class="links" href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/OERS/2022-2023/IR-CER-HZ-B-HBO-ICT-full-time-2022-2023-DEF.pdf">Implementation regulations</a></button>
+            <button class="button is-link links"><a class="links" href="https://teams.microsoft.com/_?culture=en-us&country=US&lm=deeplink&lmsrc=homePageWeb&cmpid=WebSignIn#/school/conversations/Off-topic?threadId=19:71aec236ba3b469f9b22fba60dea0e4b@thread.skype&ctx=channel">Teams</a></button>
+            <button class="button is-link links"><a class="links" href=" https://github.com/HZ-HBO-ICT">Github</a></button>
             <button class="button is-link links"><a class="links" href="https://learn.hz.nl/my/">HZ learn</a></button>
-            <button class="button is-link links"><a class="links" href="https://hz.osiris-student.nl/#/home">Study
-                progress</a></button>
+            <button class="button is-link links"><a class="links" href="https://hz.osiris-student.nl/#/home">Study progress</a></button>
           </div>
         </nav>
-        <script>
-          function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-          }
-
-          function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-          }
-        </script>
       </aside>
 
+      <!--the main text box-->
         <div class="box center encased has-background-grey-darker">
           <h2>The feedback I recieved from the tutors:</h2>
           <h3>The feedback on the 'WHO I AM' pdf was very clear.
@@ -90,6 +67,7 @@
           <h2>So, any pointers to my graphic absurdity?</h2 >
           </h3>
         </div>
+        
     </section>
   </main>
 </body>
