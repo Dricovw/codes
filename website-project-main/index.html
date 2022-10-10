@@ -27,6 +27,7 @@
 
 <!--backgound image in the page-->
 <body class="body-index" background="./node_modules/background-img/better-index-background.jpg">
+  <main>
   <header>
     <div class="index-container">
       <div class="image"><img class="hz-image" src="./node_modules/Photos/HZ-logo" alt="HZ logo" /></div>
@@ -35,8 +36,10 @@
       </div>
     </div>
   </header>
+  </main>
 
   <!-- Top navigation to other pages-->
+  <article>
   <div class="topnav" id="myTopnav" class="columns is-6">
     <div>
       <a href="profile.html">My Profile</a>
@@ -55,6 +58,7 @@
     </div>
     </a>
   </div>
+</article>
 
   <!--sidebar for other sources-->
   <aside>
@@ -67,12 +71,14 @@
         <button class="button is-link links"><a class="links" href="https://learn.hz.nl/my/">HZ learn</a></button>
         <button class="button is-link links"><a class="links" href="https://hz.osiris-student.nl/#/home">Study progress</a></button>
       </div>
+      <script>
+        document.getElementById("test1").style.transition = "all 2s";
+      </script>
   </aside>
-  
-<script>
-  document.getElementById("test1").style.transition = "all 2s";
-</script>
+
+
   <!--Center information of text-->
+  <article>
   <div class="box center encased pad-top">
     <h3>
       <p>Hi everyone,</p>
@@ -90,9 +96,12 @@
       <p>So I think it could be concluded that I would fit into this program.</p>
     </h3>
   </div>
+</article>
 
   <!--Image of calculator of pokemon-->
+  <article>
   <div class="image"><img class="calc-img" src="./node_modules/Photos/calculator.JPG" alt="cool picture about calculator and programming" /></div>
+</article>
 
 </body>
 <footer class="footer"></footer>
