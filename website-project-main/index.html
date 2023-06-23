@@ -9,6 +9,7 @@
     content="the main page of this website, gives info about the reason I wanted to start programming.">
   <link rel="stylesheet" type="text/css" href="node_modules/bulma/css/bulma.css" />
   <title>build your website at HZ</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
     /* some in document syling to adapt to the different amount of text */
     h3 {
@@ -118,29 +119,13 @@
         alt="cool picture about calculator and programming" /></div>
   </article>
 
-  <script>
-    // Make a GET request to the API endpoint
-    fetch('https://api.adviceslip.com/advice', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer sandbox_pk_e44772f3-976c-4d32-a3f2-1cb40cf51648'
-    },
-    body: JSON.stringify({
-        text: 'Hello, how are you?',
-        target: 'es' // Target language code, e.g., 'es' for Spanish
-    })
-})
-.then(response => response.json())
-.then(data => {
-    // Handle the translation response
-    console.log(data.translation);
-})
-.catch(error => {
-    // Handle any errors that occurred during the request
-    console.error('Error:', error);
-});
-</script>
+  <div class="center">
+    <h1>Advice Slip</h1>
+    <br>
+    <button onclick="API()" style="color: blue; background-color: red;" class="button center">API</button>
+    <br>
+    <div id="slip-container"></div>
+  </div>
 
 </body>
 <footer class="footer">
@@ -148,3 +133,31 @@
 </footer>
 
 </html>
+
+<script>
+
+
+  function API() {
+    $(document).ready(function() {
+      // Generate a random number for the query parameter
+      var randomNum = Math.floor(Math.random() * 100000);
+  
+      // Make a request to the Advice Slip API with the random query parameter
+      $.getJSON("https://api.adviceslip.com/advice?rand=" + randomNum, function(data) {
+        // Check if the request was successful
+        if (data && data.slip) {
+          // Access the advice slip object and its properties
+          var slip = data.slip;
+          var slipId = slip.id;
+          var advice = slip.advice;
+  
+          // Display the slip on the page
+          var slipContainer = document.getElementById("slip-container");
+          slipContainer.innerHTML = "<h3>Slip #" + slipId + "<br>" + advice;
+        } else {
+          console.log("Unable to fetch advice slip.");
+        }
+      });
+    });
+  }
+  </script>
