@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,0">
+  <meta name="description" content="information about the creator of this page">
+  <meta http-equiv="X-UA-Compatible" content="ie-egde">
+  <link rel="stylesheet" type="text/css" href="node_modules/bulma/css/bulma.css" />
+  <title>My Profile</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    /* some in document syling to adapt to the different amount of text */
+    h2 {
+      font-size: larger;
+    }
+
+    img {
+      width: 830px;
+      height: 400px;
+      border-image: 2px solid black;
+    }
+
+    h3 {
+      background-color: darkgoldenrod;
+      margin-left: 20%;
+      margin-right: 20%;
+      font-size: 0.7cm;
+      color: black;
+      padding-left: 2cm;
+      padding-right: 2cm;
+    }
+
+    .video {
+      width: 20cm;
+      height: 10cm;
+    }
+  </style>
+
+</head>
+
+<!--background of the page-->
+
+<body class="body-profile" background="./Photos/Middelburg2.png">
+  <main>
+    <article>
+      <h1 class="center h1-profile">
+      API
+      </h1>
+    </article>
+
+    <!--naviation of the top of the page-->
+    <article>
+      <div class="topnav" id="myTopnav" class="columns is-6">
+        <div><a  href="profile.html">My Profile</a></div>
+        <div><a href="dashboard.html">Dashboard</a></div>
+        <div><a href="blog.html">Blog</a></div>
+        <div><a href="faq.html">FAQ</a></div>
+        <div><a href="index.html">Homepage</a></div>
+        <div><a style="background-color: green;"href="index.html">API</a></div>
+      </div>
+    </article>
+
+    <!--navigation on the side-->
+    <aside>
+      <nav>
+        <div class="buttons navbar-brand sidenav">
+          <button class="button is-link links"><a class="links"
+              href="https://hz.nl/over-de-hz/regelingen-documenten-1/onderwijs-en-examenregelingen">Course and Exam
+              Regulations</a></button>
+          <button class="button is-link links"><a class="links"
+              href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/OERS/2022-2023/IR-CER-HZ-B-HBO-ICT-full-time-2022-2023-DEF.pdf">Implementation
+              regulations</a></button>
+          <button class="button is-link links"><a class="links"
+              href="https://teams.microsoft.com/_?culture=en-us&country=US&lm=deeplink&lmsrc=homePageWeb&cmpid=WebSignIn#/school/conversations/Off-topic?threadId=19:71aec236ba3b469f9b22fba60dea0e4b@thread.skype&ctx=channel">Teams</a></button>
+          <button class="button is-link links"><a class="links"
+              href=" https://github.com/HZ-HBO-ICT">Github</a></button>
+          <button class="button is-link links"><a class="links" href="https://learn.hz.nl/my/">HZ learn</a></button>
+          <button class="button is-link links"><a class="links" href="https://hz.osiris-student.nl/#/home">Study
+              progress</a></button>
+        </div>
+      </nav>
+    </aside>
+<div class="center">
+    <h1>Advice Slip</h1>
+    <br>
+    <button onclick="API()" style="color: blue; background-color: red;" class="button center">API</button>
+    <br>
+    <div id="slip-container"></div>
+  </div>
+
+  </main>
+</body>
+<footer class="footer"></footer>
+</html>
+<script>
+
+
+function API() {
+  $(document).ready(function() {
+    // Generate a random number for the query parameter
+    var randomNum = Math.floor(Math.random() * 100000);
+
+    // Make a request to the Advice Slip API with the random query parameter
+    $.getJSON("https://api.adviceslip.com/advice?rand=" + randomNum, function(data) {
+      // Check if the request was successful
+      if (data && data.slip) {
+        // Access the advice slip object and its properties
+        var slip = data.slip;
+        var slipId = slip.id;
+        var advice = slip.advice;
+
+        // Display the slip on the page
+        var slipContainer = document.getElementById("slip-container");
+        slipContainer.innerHTML = "<h3>Slip #" + slipId + "<br>" + advice;
+      } else {
+        console.log("Unable to fetch advice slip.");
+      }
+    });
+  });
+}
+</script>
+
+

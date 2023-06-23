@@ -28,11 +28,11 @@
 
 <!--backgound image in the page-->
 
-<body class="body-index" background="./node_modules/background-img/better-index-background.jpg">
+<body class="body-index" background='./Photos/index.png'>
   <main>
     <header>
       <div class="index-container">
-        <div class="image"><img class="hz-image" src="./node_modules/Photos/HZ-logo" alt="HZ logo" /></div>
+        <div class="image"><img class="hz-image" src="./Photos/HZ-logo.png" alt="HZ logo" /></div>
         <div class="text">
           <h1 class="center h1-index">website</h1>
         </div>
@@ -59,6 +59,9 @@
         <a style="background-color: green;" href="index.html">Homepage</a>
       </div>
       </a>
+      <div>
+        <a href="API.html">API</a>
+      </div>
     </div>
   </article>
 
@@ -79,9 +82,6 @@
         <button class="button is-link links"><a class="links" href="https://hz.osiris-student.nl/#/home">Study
             progress</a></button>
       </div>
-      <script>
-        document.getElementById("test1").style.transition = "all 2s";
-      </script>
   </aside>
 
 
@@ -108,13 +108,43 @@
     </div>
   </article>
 
+  <article>
+
+  </article>
+
   <!--Image of calculator of pokemon-->
   <article>
-    <div class="image"><img class="calc-img" src="./node_modules/Photos/calculator.JPG"
+    <div class="image"><img class="calc-img" src="./Photos/calculator.png"
         alt="cool picture about calculator and programming" /></div>
   </article>
 
+  <script>
+    // Make a GET request to the API endpoint
+    fetch('https://api.adviceslip.com/advice', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer sandbox_pk_e44772f3-976c-4d32-a3f2-1cb40cf51648'
+    },
+    body: JSON.stringify({
+        text: 'Hello, how are you?',
+        target: 'es' // Target language code, e.g., 'es' for Spanish
+    })
+})
+.then(response => response.json())
+.then(data => {
+    // Handle the translation response
+    console.log(data.translation);
+})
+.catch(error => {
+    // Handle any errors that occurred during the request
+    console.error('Error:', error);
+});
+</script>
+
 </body>
-<footer class="footer"></footer>
+<footer class="footer">
+  slip
+</footer>
 
 </html>
