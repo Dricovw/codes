@@ -81,12 +81,44 @@
         </div>
       </nav>
     </aside>
-
+<div class="center">
+    <h1>Advice Slip</h1>
+    <br>
+    <button onclick="API()" style="color: blue; background-color: red;" class="button center">API</button>
+    <br>
+    <div id="slip-container"></div>
+  </div>
 
   </main>
 </body>
 <footer class="footer"></footer>
 </html>
+<script>
 
+
+function API() {
+  $(document).ready(function() {
+    // Generate a random number for the query parameter
+    var randomNum = Math.floor(Math.random() * 100000);
+
+    // Make a request to the Advice Slip API with the random query parameter
+    $.getJSON("https://api.adviceslip.com/advice?rand=" + randomNum, function(data) {
+      // Check if the request was successful
+      if (data && data.slip) {
+        // Access the advice slip object and its properties
+        var slip = data.slip;
+        var slipId = slip.id;
+        var advice = slip.advice;
+
+        // Display the slip on the page
+        var slipContainer = document.getElementById("slip-container");
+        slipContainer.innerHTML = "<h3>Slip #" + slipId + "<br>" + advice;
+      } else {
+        console.log("Unable to fetch advice slip.");
+      }
+    });
+  });
+}
+</script>
 
 
